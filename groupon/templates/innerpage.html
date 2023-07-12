@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - GroupOn</title>
+  <title>Contact - GroupOn</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -71,15 +71,23 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>Contact</h2>
           <ol>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li>Inner Page</li>
+            <li><a href="{% url 'index' %}">Contact</a></li>
+            <li>Contact</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
+    {% if name %}
+    <center>
+      <h2>Thanks {{ name }}!</h2>
+      <p>We received your email and will respond shortly...</p>
+    </center>
+    <br>
+    <br>
+    <!-- {% else %}
 
     <section class="inner-page">
       <div class="container">
@@ -87,7 +95,8 @@
           Example inner page template
         </p>
       </div>
-    </section>
+    </section> -->
+    {% endif %}
 
   </main><!-- End #main -->
 
